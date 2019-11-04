@@ -86,6 +86,10 @@ final class DeadHostState implements Comparable<DeadHostState> {
         return failedAttempts;
     }
 
+    long getConnectionTimeoutNanos(){
+        return MAX_CONNECTION_TIMEOUT_NANOS;
+    }
+
     @Override
     public int compareTo(DeadHostState other) {
         if (timeSupplier != other.timeSupplier) {
